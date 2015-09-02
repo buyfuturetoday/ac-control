@@ -12,3 +12,5 @@ For output, it produces a timestamp with the temperature every time it takes an 
 * A plus (+) if the temperature is above 77F and the AC is already running
 
 If the temperature drops below 63 while the AC is off, or above 77.5 while the AC is on, the script assumes the shitty air conditioner failed to respond to a power cycle command and sends another one.
+
+**<big>WARNING: This script relies on dangerous things, like the user your web server runs as having sudo permission.  Ensure that it's only run on a secure, properly firewalled network.</big>**
