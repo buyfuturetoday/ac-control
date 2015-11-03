@@ -1,6 +1,8 @@
 # ac-control
 Controls my air conditioner with a raspberry pi and a shitty USB temp sensor
 
+This project is now abandoned because my shitty air conditioner broke.
+
 It's probably not very useful unless you have the same shitty USB temp sensor that writes logs in CSV format, and a shitty air conditioner with only manual controls.
 
 Run it with the argument "on" if the AC is on when the script starts, or "off" or no arguments if it's off.
