@@ -1,6 +1,6 @@
 #	ac-control
 # 	version 0.0.1
-#	Skylar Akemi / https://github.com/homura/ac-control
+#	Skylar Gasai / https://github.com/YandereSkylar/ac-control
 #	Get temperature from USB sensor, cycle AC accordingly
 #
 #	This program is free software: you can redistribute it and/or modify

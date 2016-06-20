@@ -1,18 +1,16 @@
 # ac-control
-Controls my air conditioner with a raspberry pi and a shitty USB temp sensor
+Controls my air conditioner with my raspberry pi and my shitty USB temp sensor
 
-This project is now abandoned because my shitty air conditioner broke.
+ac_task.pl goes on the machine with the temp sensor and gets ran by a scheduled task
 
-It's probably not very useful unless you have the same shitty USB temp sensor that writes logs in CSV format, and a shitty air conditioner with only manual controls.
+ac.php, on.py, and off.py go on the raspberry pi in the web server's directory
 
-Run it with the argument "on" if the AC is on when the script starts, or "off" or no arguments if it's off.
+## Dependencies
+* Perl with module LWP::Simple
+* Python with RPi.GPIO
+* PHP
+* A temp sensor that writes logs in a usable format
+* A relay rated for 24VAC between your raspberry pi's GPIO pins and your air conditioner
+* An air conditioner that can be switched on by connecting two wires (probably the Y and R or Rc)
 
-For output, it produces a timestamp with the temperature every time it takes an action.  Otherwise, it outputs a character every time it checks the temperature:
-
-* A dash (-) if the temperature is below 72F and the AC is already off
-* A dot (.) if the temperature is between 72F and 77F, regardless of AC state
-* A plus (+) if the temperature is above 77F and the AC is already running
-
-If the temperature drops below 63 while the AC is off, or above 77.5 while the AC is on, the script assumes the shitty air conditioner failed to respond to a power cycle command and sends another one.
-
-**<big>WARNING: This script relies on dangerous things, like the user your web server runs as having sudo permission.  Ensure that it's only run on a secure, properly firewalled network.</big>**
+**<big>WARNING: This script relies on dangerous things, like the user your web server runs as having sudo permission.  I take no responsibility if you do something stupid and get your pi hacked, or break your air conditioner.</big>**
