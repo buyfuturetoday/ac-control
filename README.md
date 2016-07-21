@@ -21,4 +21,6 @@ ac.php, on.py, and off.py go on the raspberry pi in the web server's directory
 
 ![Circuit diagram](https://raw.githubusercontent.com/YandereSkylar/ac-control/master/circuit.png)
 
+For the vent control script, I'm using an AM2302 sensor with https://github.com/adafruit/Adafruit_Python_DHT
+
 **<big>WARNING: This script relies on dangerous things, like the user your web server runs as having sudo permission.  I take no responsibility if you do something stupid and get your pi hacked, let the magic smoke out of it with too much voltage, break your air conditioner, or start a world war by assassinating the archduke for taking the last sandwich.</big>**
