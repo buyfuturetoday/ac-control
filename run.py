@@ -12,7 +12,7 @@ FILE = open(statefile,"w")
 FILE.writelines("AC manual override is <span style='color:blue'><b>ON</b></span>")
 FILE.close()
 print 'Running~\n'
-time.sleep(60 * 25)
+time.sleep(60 * 60) # Longer cycles remove more humidity from the air
 GPIO.output(13, True)
 FILE = open(statefile,"w")
 FILE.writelines("AC manual override is <b>OFF</b>")
