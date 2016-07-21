@@ -1,5 +1,5 @@
 # ac-control
-Controls my air conditioner with my raspberry pi and a pair of 
+Controls my air conditioner with my raspberry pi and a digital temperature sensor.  Also controls a motorized air vent with another temperature sensor for a kind of homemade zoned system.
 
 ac_task.pl goes on the machine with the temp sensor and gets ran by a scheduled task
 
