@@ -1,5 +1,5 @@
 #	ac_task.pl
-#	Skylar Gasai / https://github.com/YandereSkylar/ac-control
+#	Skylar Gasai \ skylar@yandere.love \ https://github.com/YandereSkylar/ac-control
 #
 #	Reads the temperature from a log file, checks it against configured maximum, runs AC if needed
 #	This script is designed to be run as a Windows scheduled task
@@ -38,10 +38,10 @@ if ($temp >= 75) {
 	$ua->get("http://server.example.com/ac.php?on=1");
 	my $datestring = localtime();
 	open (logfile, ">>", "C:\\path\\to\\ac.log");
-	print logfile $datestring . " - " . 'Temperature too high (' . $temp . '), ran air conditioner for 40 minutes';
+	print logfile $datestring . " - " . 'Temperature too high (' . $temp . '), ran air conditioner for 120 minutes';
 	print logfile "\n";
 	close logfile;
-	sleep(60 * 40);	# minimum run time of 40 minutes
+	sleep(60 * 120);	# minimum run time of 40 minutes
 	$ua->get("http://server.example.com/ac.php?off=1");
 } else {
 	die("Temperature " . $temp . " is below safe maximum.");
