@@ -125,10 +125,10 @@ if ($f < ($sp[0])) {
 			print "Air vent is closed, opening it\n";
 			system("python /srv/www/device1/open.py");
 		}
-		if ($f > ($sp[0] - $toocold)) {
+		if ($f < ($sp[0] - $toocold)) {
 			print "Air vent is already open, but it's below " . ($sp[0] - $toocold) . "F.  Starting furnace.\n";
 			system("python /srv/www/device3/on.py");
-		} elsif ($f > ($sp[0] - 0.5)) {
+		} elsif ($f < ($sp[0] - 0.5)) {
 			print "It's within .5 degrees below set point.  Stopping furnace.\n";
 			system("python /srv/www/device3/off.py");
 		}
